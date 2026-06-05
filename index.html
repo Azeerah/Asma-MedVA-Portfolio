@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Asma Bushrah Kokori Ahmed — Clinical Operations Partner</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f1a1c;--teal:#0a6672;--teal-light:#1a8a99;--gold:#c4922a;
+  --cream:#f7f3ed;--warm-white:#fdfaf6;--muted:#6b7c80;--border:#ddd5c8;
+}
+html{scroll-behavior:smooth}
+body{background:var(--warm-white);color:var(--ink);font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden}
+
+/* HEADER */
+header{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.header-left{background:var(--ink);padding:80px 60px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
+.header-left::after{content:'';position:absolute;top:0;right:-40px;bottom:0;width:80px;background:var(--ink);clip-path:polygon(0 0,100% 10%,100% 90%,0 100%);z-index:2}
+.header-right{background:var(--cream);padding:80px 80px 80px 100px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:0}
+.tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;opacity:0;animation:fadeUp .8s ease forwards .2s}
+.name{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,5vw,64px);line-height:1.05;color:var(--warm-white);opacity:0;animation:fadeUp .8s ease forwards .4s}
+.name em{font-style:italic;color:var(--teal-light)}
+.title-line{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:20px;border-top:1px solid #2a3e42;padding-top:16px;opacity:0;animation:fadeUp .8s ease forwards .6s}
+.creds{display:flex;flex-direction:column;gap:10px;margin-top:40px;opacity:0;animation:fadeUp .8s ease forwards .8s}
+.cred-item{display:flex;align-items:center;gap:12px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8fa8ac}
+.cred-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.positioning-block{opacity:0;animation:fadeUp .8s ease forwards .5s}
+.position-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+.one-liner{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:600;line-height:1.2;color:var(--ink);margin-bottom:20px}
+.one-liner span{color:var(--teal)}
+.position-para{font-size:15px;line-height:1.75;color:#3d5559;font-weight:300}
+.compliance-inline{margin-top:20px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;color:var(--teal);line-height:1.8}
+
+/* SECTIONS */
+section{position:relative;z-index:1}
+.section-inner{max-width:1100px;margin:0 auto;padding:100px 60px}
+.section-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:60px}
+.section-title em{font-style:italic;color:var(--teal)}
+
+/* INTRO */
+.intro-section{background:var(--warm-white)}
+.intro-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
+.intro-sidebar{position:sticky;top:40px}
+.vertical-rule{width:1px;height:60px;background:var(--teal);margin-bottom:20px}
+.sidebar-note{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;line-height:1.8;color:var(--muted);text-transform:uppercase}
+.intro-body p{font-size:17px;line-height:1.9;color:#2a3e42;margin-bottom:24px;font-weight:300}
+.intro-body p strong{font-weight:500;color:var(--ink)}
+.intro-body p em{font-style:italic;color:var(--teal);font-family:'Cormorant Garamond',serif;font-size:19px}
+
+/* IMPACT */
+.impact-section{background:var(--ink)}
+.impact-section .section-title{color:var(--warm-white)}
+.impact-section .section-label{color:var(--teal-light)}
+.bullets-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.bullet-card{background:#1a2e32;padding:36px 40px;position:relative;overflow:hidden;transition:background .3s ease}
+.bullet-card:hover{background:#223a3f}
+.bullet-card.full-width{grid-column:1/-1}
+.bullet-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--teal);transform:scaleY(0);transform-origin:top;transition:transform .4s ease}
+.bullet-card:hover::before{transform:scaleY(1)}
+.bullet-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--teal-light);letter-spacing:.2em;margin-bottom:16px;display:block}
+.bullet-text{font-size:15px;line-height:1.8;color:#a8c0c4;font-weight:300}
+.bullet-text strong{color:var(--warm-white);font-weight:500}
+
+/* SERVICES */
+.services-section{background:var(--cream)}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.service-card{background:var(--warm-white);border:1px solid var(--border);padding:36px 32px;position:relative;transition:transform .3s ease,box-shadow .3s ease}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(10,102,114,.1)}
+.service-icon{font-size:24px;margin-bottom:16px;display:block}
+.service-name{font-family:'Outfit',sans-serif;font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.service-rate{font-family:'DM Mono',monospace;font-size:14px;font-weight:500;color:var(--gold);margin-bottom:12px}
+.service-desc{font-size:14px;line-height:1.75;color:var(--muted);font-weight:300}
+
+/* TECH STACK */
+.tech-section{background:var(--ink)}
+.tech-section .section-title{color:var(--warm-white)}
+.tech-section .section-label{color:var(--teal-light)}
+.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.tech-card{background:#1a2e32;padding:28px 36px}
+.tech-cat{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.tech-items{font-size:14px;line-height:1.9;color:#a8c0c4;font-weight:300}
+
+/* CTA */
+.cta-section{background:var(--teal);text-align:center}
+.cta-section .section-inner{padding:80px 60px}
+.cta-section .section-title{color:var(--warm-white);margin-bottom:20px}
+.cta-sub{font-size:16px;color:rgba(255,255,255,.75);margin-bottom:40px;font-weight:300}
+.cta-contacts{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.cta-item{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.1em;color:var(--warm-white);opacity:.9;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:4px;transition:opacity .2s}
+.cta-item:hover{opacity:1}
+
+/* COMPLIANCE FOOTER */
+.compliance-footer{background:#07444e;text-align:center;padding:20px 40px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.8);text-transform:uppercase;line-height:2}
+
+/* DIVIDER */
+.teal-bar{height:4px;background:linear-gradient(90deg,var(--teal),var(--gold),var(--teal-light))}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  header{grid-template-columns:1fr;min-height:auto}
+  .header-left{padding:60px 40px;min-height:50vh}
+  .header-left::after{display:none}
+  .header-right{padding:60px 40px}
+  .intro-grid{grid-template-columns:1fr;gap:40px}
+  .intro-sidebar{position:static}
+  .bullets-grid,.tech-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .section-inner{padding:70px 30px}
+}
+@media(max-width:600px){
+  .services-grid{grid-template-columns:1fr}
+  .header-left{padding:50px 28px}
+  .header-right{padding:50px 28px}
+  .cta-contacts{flex-direction:column;align-items:center;gap:20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <div class="tag">Clinical Operations Partner · MBBS Physician</div>
+    <h1 class="name">Asma<br><em>Bushrah</em><br>Kokori Ahmed</h1>
+    <div class="title-line">MBBS · ALX Certified VA · MPH Candidate</div>
+    <div class="creds">
+      <div class="cred-item"><span class="cred-dot"></span>China Medical University · MBBS 2020</div>
+      <div class="cred-item"><span class="cred-dot"></span>3+ Years Direct Clinical Practice</div>
+      <div class="cred-item"><span class="cred-dot"></span>Project Manager, Gradeline Engineering</div>
+      <div class="cred-item"><span class="cred-dot"></span>Abuja, Nigeria · Available EST / PST / GMT</div>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <div class="positioning-block">
+      <div class="position-label">// Clinical Operations Partner · MBBS Physician</div>
+      <h2 class="one-liner">Your charts done.<br>Your PAs moving.<br><span>You, on patients.</span></h2>
+      <p class="position-para">
+        MBBS physician with 3+ years of direct clinical practice — now delivering remote clinical operations support to US and UK practices. Your prior authorizations move in 24 hours. Your EHR backlog clears before you leave the building. Your inbox has answers, not questions.
+      </p>
+      <div class="compliance-inline">
+        HIPAA-compliant &nbsp;·&nbsp; BAA-ready &nbsp;·&nbsp; PHI never stored locally<br>
+        All access via client-designated secure portals &nbsp;·&nbsp; Encrypted comms only
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="teal-bar"></div>
+
+<!-- INTRODUCTION -->
+<section class="intro-section">
+  <div class="section-inner">
+    <div class="intro-grid">
+      <div class="intro-sidebar reveal">
+        <div class="vertical-rule"></div>
+        <div class="sidebar-note">Who I Am &amp;<br>Why It Matters</div>
+      </div>
+      <div class="intro-body reveal">
+        <div class="section-label">// The Difference</div>
+        <p>I'm a physician turned clinical operations specialist. After completing my <strong>MBBS at China Medical University</strong> and spending 3+ years in active clinical practice — tertiary hospital wards, occupational health, outpatient — I made a deliberate move into remote clinical support.</p>
+        <p>I've documented 80–100 patients a week. I've written ICD-10-coded prior authorization letters. I've worked in a <strong>400-bed teaching hospital</strong> across Internal Medicine, Surgery, and Outpatient. That's not a VA background — that's a clinical background applied to your administrative pain.</p>
+        <p>Right now I'm the <strong>Project Manager at Gradeline Engineering</strong>, running bid pipelines and executive operations. I'm also an <strong>MPH candidate in Health Information Management</strong> — which means I understand population health data, DHIS2, and health systems, not just individual patient charts.</p>
+        <p><em>General VAs quantify time. I quantify patients, notes, and authorizations.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="teal-bar"></div>
+
+<!-- IMPACT BULLETS -->
+<section class="impact-section">
+  <div class="section-inner">
+    <div class="section-label">// Results &amp; Clinical Volume</div>
+    <h2 class="section-title reveal">What I've <em>actually</em> done.</h2>
+    <div class="bullets-grid">
+      <div class="bullet-card reveal">
+        <span class="bullet-num">01</span>
+        <p class="bullet-text"><strong>Completed same-day SOAP documentation</strong> for 80–100 weekly patient encounters at Nigerian Customs Service, eliminating note backlog through structured clinical documentation protocols.</p>
+      </div>
+      <div class="bullet-card reveal">
+        <span class="bullet-num">02</span>
+        <p class="bullet-text"><strong>Processed prior authorization requests</strong> with ICD-10-coded clinical justifications, drafting denial appeals and reducing specialist referral delays for patients requiring secondary care.</p>
+      </div>
+      <div class="bullet-card reveal">
+        <span class="bullet-num">03</span>
+        <p class="bullet-text"><strong>Rotated across 3 departments</strong> in a 400+ bed tertiary teaching hospital — Internal Medicine, Surgery, Outpatient — completing clinical documentation for 30–50 encounters per week per rotation.</p>
+      </div>
+      <div class="bullet-card reveal">
+        <span class="bullet-num">04</span>
+        <p class="bullet-text"><strong>Delivered structured clinical evidence briefs</strong> using PubMed, Cochrane, and AI-assisted research tools — replacing 3–4 hours of physician reading time per brief with a 48-hr turnaround summary.</p>
+      </div>
+      <div class="bullet-card reveal">
+        <span class="bullet-num">05</span>
+        <p class="bullet-text"><strong>Managed a multi-contract bid pipeline</strong> with zero missed deadlines, coordinating executive correspondence, documentation, and multi-stakeholder workflows under time pressure.</p>
+      </div>
+      <div class="bullet-card reveal">
+        <span class="bullet-num">06</span>
+        <p class="bullet-text"><strong>DHIS2 certified</strong> — proficient in population health data management and indicator tracking, providing real clinical data context to health information system support.</p>
+      </div>
+      <div class="bullet-card full-width reveal">
+        <span class="bullet-num">07</span>
+        <p class="bullet-text"><strong>Operated in clinical environments</strong> where confidentiality, accuracy, and speed were non-negotiable — not learned in a VA course, but lived daily across 3 hospitals and an occupational health service. That standard doesn't change remotely.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="teal-bar"></div>
+
+<!-- SERVICES -->
+<section class="services-section">
+  <div class="section-inner">
+    <div class="section-label">// What I Offer</div>
+    <h2 class="section-title reveal">Four things I do <em>better</em> than most.</h2>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-icon">📋</span>
+        <div class="service-name">Prior Authorization Support</div>
+        <div class="service-rate">$40–60 / hr</div>
+        <p class="service-desc">ICD-10/CPT-coded clinical justifications. 24-hr turnaround. Denial appeals drafted and submitted. You'll never chase an insurer again.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🖥️</span>
+        <div class="service-name">Clinical EHR Documentation</div>
+        <div class="service-rate">$50–80 / hr</div>
+        <p class="service-desc">SOAP notes, chart management, same-day completion. Epic · Athenahealth · eClinicalWorks. Your charts are done before you leave the building.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🔬</span>
+        <div class="service-name">Medical Research Summaries</div>
+        <div class="service-rate">$60–100 / hr</div>
+        <p class="service-desc">Structured evidence briefs in 48 hrs via PubMed, Cochrane &amp; Elicit. You get the answer, not the paper — replacing 3–4 hrs of reading per brief.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🩺</span>
+        <div class="service-name">Async Patient Triage Support</div>
+        <div class="service-rate">$35–50 / hr</div>
+        <p class="service-desc">Symptom screening, escalation protocols, protocol-driven async triage. Patients routed correctly before you review a single chart.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="teal-bar"></div>
+
+<!-- TECH STACK -->
+<section class="tech-section">
+  <div class="section-inner">
+    <div class="section-label">// Tools &amp; Systems</div>
+    <h2 class="section-title reveal">Built for your <em>stack.</em></h2>
+    <div class="tech-grid">
+      <div class="tech-card reveal">
+        <div class="tech-cat">Clinical Systems</div>
+        <div class="tech-items">Epic · Athenahealth · eClinicalWorks<br>CoverMyMeds · Availity · Klara · SimplePractice</div>
+      </div>
+      <div class="tech-card reveal">
+        <div class="tech-cat">Research &amp; Evidence</div>
+        <div class="tech-items">PubMed · Cochrane Library · Elicit<br>Semantic Scholar · Connected Papers · DHIS2</div>
+      </div>
+      <div class="tech-card reveal">
+        <div class="tech-cat">Project &amp; Operations</div>
+        <div class="tech-items">Notion · ClickUp · Asana<br>Google Workspace · Loom · Calendly</div>
+      </div>
+      <div class="tech-card reveal">
+        <div class="tech-cat">Automation &amp; Async</div>
+        <div class="tech-items">Zapier · Make · Slack<br>Payoneer · Wise · DocuSign</div>
+      </div>
+      <div class="tech-card reveal" style="grid-column:1/-1">
+        <div class="tech-cat">Compliance &amp; Security</div>
+        <div class="tech-items">HIPAA-compliant workflows · BAA-ready · Bitwarden · Encrypted communications only · PHI never stored locally</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="teal-bar"></div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-inner">
+    <div class="section-label" style="color:rgba(255,255,255,.6)"">// Ready When You Are</div>
+    <h2 class="section-title reveal">Let's work together.</h2>
+    <p class="cta-sub">Monday – Friday &nbsp;·&nbsp; Available EST / PST / GMT &nbsp;·&nbsp; Async-first &nbsp;·&nbsp; Immediate start</p>
+    <div class="cta-contacts">
+      <a class="cta-item" href="mailto:asmabushrahkokoriahmed@gmail.com">asmabushrahkokoriahmed@gmail.com</a>
+      <a class="cta-item" href="https://linkedin.com/in/asmabushrah-kokori-ahmed">linkedin.com/in/asmabushrah-kokori-ahmed</a>
+      <span class="cta-item">MBBS · ALX Certified VA · MPH</span>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIANCE FOOTER -->
+<div class="compliance-footer">
+  HIPAA &nbsp;·&nbsp; BAA-Ready &nbsp;·&nbsp; PHI Never Stored Locally &nbsp;·&nbsp; Async-First &nbsp;·&nbsp; Encrypted Communications &nbsp;·&nbsp; Client Systems Only
+</div>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
