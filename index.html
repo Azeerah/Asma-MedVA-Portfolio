@@ -42,8 +42,41 @@ section{position:relative;z-index:1}
 
 /* INTRO */
 .intro-section{background:var(--warm-white)}
+.intro-grid{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:80px;
+    align-items:start;
+}
+
+.headshot-wrapper{
+    margin-bottom:30px;
+}
+
+.headshot{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid var(--gold);
+    padding:6px;
+    background:var(--warm-white);
+    box-shadow:0 15px 40px rgba(10,102,114,.15);
+    display:block;
+    margin:0 auto;
+}
+
+@media(max-width:900px){
+    .intro-grid{
+        grid-template-columns:1fr;
+    }
+
+    .headshot{
+        max-width:240px;
+    }
+}
 .intro-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
-.intro-sidebar{position:sticky;top:40px}
+.intro-sidebar{position:sticky; top:40px; text-align:center;}
 .vertical-rule{width:1px;height:60px;background:var(--teal);margin-bottom:20px}
 .sidebar-note{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;line-height:1.8;color:var(--muted);text-transform:uppercase}
 .intro-body p{font-size:17px;line-height:1.9;color:#2a3e42;margin-bottom:24px;font-weight:300}
@@ -160,9 +193,22 @@ section{position:relative;z-index:1}
   <div class="section-inner">
     <div class="intro-grid">
       <div class="intro-sidebar reveal">
-        <div class="vertical-rule"></div>
-        <div class="sidebar-note">Who I Am &amp;<br>Why It Matters</div>
-      </div>
+
+    <div class="headshot-wrapper">
+        <img src="headshot.jpeg"
+             alt="Dr. Asma Bushrah Kokori Ahmed"
+             class="headshot">
+    </div>
+
+    <div class="vertical-rule"></div>
+
+    <div class="sidebar-note">
+        MBBS Physician<br>
+        Clinical Operations Partner<br>
+        Medical Virtual Assistant
+    </div>
+
+</div>
       <div class="intro-body reveal">
         <div class="section-label">// The Difference</div>
         <p>I'm a physician turned clinical operations specialist. After completing my <strong>MBBS at China Medical University</strong> and spending 3+ years in active clinical practice — tertiary hospital wards, occupational health, outpatient — I made a deliberate move into remote clinical support.</p>
